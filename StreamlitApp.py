@@ -10,8 +10,22 @@ from src.McqGenerator.mcqgen import generate_evaluate_chain
 from src.McqGenerator.logger import logging
 
 
-with open("/Users/aryannayar/Downloads/mcqgen/response.json","r") as file:
-    RESPONSE_JSON=json.load(file)
+# Inline schema (no filesystem)
+RESPONSE_JSON = {
+    "1": {"mcq": "multiple choice question",
+          "options": {"a": "choice here","b": "choice here","c": "choice here","d": "choice here"},
+          "correct": "correct answer"},
+    "2": {"mcq": "multiple choice question",
+          "options": {"a": "choice here","b": "choice here","c": "choice here","d": "choice here"},
+          "correct": "correct answer"},
+    "3": {"mcq": "multiple choice question",
+          "options": {"a": "choice here","b": "choice here","c": "choice here","d": "choice here"},
+          "correct": "correct answer"},
+    "4": {"mcq": "multiple choice question",
+          "options": {"a": "choice here","b": "choice here","c": "choice here","d": "choice here"},
+          "correct": "correct answer"},
+}
+
 
 
 st.title("MCQ Creator Application with Langchain")
